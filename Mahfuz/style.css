@@ -1,0 +1,197 @@
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50; /* your green */
+}
+
+h1 {
+  color: #fff; /* you had white for h1 in your snippet */
+}
+
+/* Header and Navigation */
+header {
+  background-color: #fff;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 90%;
+  top: 0;
+  z-index: 1000;
+  color: #555;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li a, #themeToggle {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  padding: 0 15px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.3s ease;
+}
+
+nav li a:hover, #themeToggle:hover {
+  color: #4CAF50;
+}
+
+/* Main content */
+main {
+  padding-top: 80px; /* accommodate fixed header */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50;
+}
+
+/* Products grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 5%;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4); /* subtle green shadow */
+}
+
+.product img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info h3 {
+  margin: 10px 0 5px;
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50;
+}
+
+.product-info p {
+  font-weight: bold;
+  color: #333;
+}
+
+.product-info button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 5%;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Dark Mode */
+.darkmode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.darkmode header,
+.darkmode footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+.darkmode .product {
+  background-color: #1e1e1e;
+  border-color: #444;
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
+}
+
+.darkmode .product-info h3 {
+  color: #4CAF50;
+}
+
+.darkmode .product-info p {
+  color: #ddd;
+}
+
+.darkmode .product-info button {
+  background-color: #4CAF50;
+  color: #121212;
+}
+
+.darkmode .product-info button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li a, #themeToggle {
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
