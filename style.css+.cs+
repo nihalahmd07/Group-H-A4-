@@ -1,0 +1,61 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1,  {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+}
+h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #4CAF50;
+}
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 0 15px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #;
+}
+
+.search-container input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
