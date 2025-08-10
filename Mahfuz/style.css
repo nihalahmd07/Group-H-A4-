@@ -39,10 +39,16 @@ header {
   color: #555;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  margin: 0;
+.logo img {
+  max-height: 50px;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1;
 }
 
 /* Navigation */
@@ -143,7 +149,7 @@ h2 {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #9f9a9a;
   color: white;
   text-align: center;
   padding: 15px 5%;
