@@ -15,13 +15,22 @@ h1 {
   color: #fff;
 }
 
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 /* Header and Navigation */
 header {
   background-color: #fff;
   padding: 1rem 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 90%;
@@ -30,12 +39,19 @@ header {
   color: #555;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  margin: 0;
+.logo img {
+  max-height: 50px;
 }
 
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   margin: 0;
@@ -43,25 +59,22 @@ nav ul {
   display: flex;
 }
 
-nav li a, #themeToggle {
+nav li a {
   text-decoration: none;
   color: #555;
   font-weight: bold;
   padding: 0 15px;
   cursor: pointer;
-  background: none;
-  border: none;
-  font-family: 'Roboto', sans-serif;
   transition: color 0.3s ease;
 }
 
-nav li a:hover, #themeToggle:hover {
+nav li a:hover {
   color: #4CAF50;
 }
 
 /* Main content */
 main {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 h2 {
@@ -94,12 +107,12 @@ h2 {
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-/* Image container to keep equal card height */
+/* Image container */
 .product img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* Show full image without cropping */
-  background-color: #f9f9f9; /* Background fill for empty space */
+  object-fit: contain;
+  background-color: #f9f9f9;
   border-radius: 8px;
   padding: 5px;
 }
@@ -118,64 +131,14 @@ h2 {
   font-size: 1.1rem;
 }
 
-.product-info button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.product-info button:hover {
-  background-color: #45a049;
-}
-
 /* Footer */
 footer {
-  background-color: #a39f9f;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 15px 5%;
   margin-top: 30px;
   font-family: 'Roboto', sans-serif;
-}
-
-/* Dark Mode */
-.darkmode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.darkmode header,
-.darkmode footer {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-.darkmode .product {
-  background-color: #1e1e1e;
-  border-color: #444;
-  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
-}
-
-.darkmode .product-info h3 {
-  color: #4CAF50;
-}
-
-.darkmode .product-info p {
-  color: #ddd;
-}
-
-.darkmode .product-info button {
-  background-color: #4CAF50;
-  color: #121212;
-}
-
-.darkmode .product-info button:hover {
-  background-color: #45a049;
 }
 
 /* Responsive */
@@ -188,19 +151,14 @@ footer {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    text-align: center;
   }
 
   nav ul {
     flex-direction: column;
   }
 
-  nav li a, #themeToggle {
+  nav li a {
     padding: 10px 0;
-  }
-
-  h1 {
-    font-size: 2.5rem;
   }
 }
 
