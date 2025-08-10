@@ -65,12 +65,20 @@ nav li a:hover {
 
 /* Main */
 main {
-  padding-top: 100px;
+  padding-top: 80px; /* accommodate fixed header */
 }
 
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50;
+}
+
+/* Products grid */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns on large screens */
   gap: 20px;
   padding: 20px 5%;
 }
@@ -91,14 +99,11 @@ main {
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-/* Product Images */
 .product img {
   width: 100%;
-  height: 260px;
+  max-height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  padding: 5px;
 }
 
 /* Product Info */
@@ -106,11 +111,14 @@ main {
   margin: 12px 0 6px;
   font-family: 'Playfair Display', serif;
   color: #4CAF50;
+  font-size: 1.25rem; /* Increased font size for product titles */
+  font-weight: bold;
 }
 
 .product-info p {
   font-weight: bold;
   color: #333;
+  font-size: 1.1rem; /* Increased font size for prices */
 }
 
 .product-info button {
@@ -141,7 +149,7 @@ main {
 
 /* Footer */
 footer {
-  background-color: #000000;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 15px 5%;
@@ -150,6 +158,12 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -169,6 +183,6 @@ footer {
   }
 
   .products {
-    grid-template-columns: 1fr; /* 1 column for small devices */
+    grid-template-columns: 1fr;
   }
 }
