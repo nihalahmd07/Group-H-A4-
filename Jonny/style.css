@@ -1,4 +1,3 @@
-@@ -1,169 +1,169 @@
 /* Reset and Base Styles */
 body {
   margin: 0;
@@ -16,16 +15,7 @@ h1 {
   color: #fff;
 }
 
-/* Section Heading */
-.section-heading {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Header and Navigation */
+/* Header */
 header {
   background-color: #fff;
   padding: 1rem 5%;
@@ -41,7 +31,6 @@ header {
 }
 
 .logo img {
-  max-height: 50px;
   max-height: 90px;
 }
 
@@ -74,19 +63,11 @@ nav li a:hover {
   color: #4CAF50;
 }
 
-/* Main content */
+/* Main */
 main {
   padding-top: 100px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-}
-
-/* Products grid */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -102,6 +83,7 @@ h2 {
   text-align: center;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .product:hover {
@@ -109,33 +91,48 @@ h2 {
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-/* Image container */
+/* Product Images */
 .product img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  background-color: #f9f9f9;
+  height: 260px;
+  object-fit: cover;
   border-radius: 8px;
+  background-color: #f9f9f9;
   padding: 5px;
 }
 
+/* Product Info */
 .product-info h3 {
-  margin: 10px 0 5px;
+  margin: 12px 0 6px;
   font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.5px;
 }
 
 .product-info p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #555;
+}
+
+.product-info p:last-child {
   font-weight: bold;
-  color: #333;
   font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+/* Selected Product Highlight */
+.product.selected {
+  border: 2px solid #4CAF50;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.6);
 }
 
 /* Footer */
 footer {
-  background-color: #333;
   background-color: #9f9a9a;
   color: white;
   text-align: center;
@@ -148,20 +145,6 @@ footer {
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li a {
-    padding: 10px 0;
   }
 }
 
