@@ -20,8 +20,9 @@ h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #4CAF50; /* Now matches product title green */
   margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Header */
@@ -29,8 +30,8 @@ header {
   background-color: #fafafa;
   padding: 1rem 5%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 90%;
@@ -40,7 +41,7 @@ header {
 }
 
 .logo img {
-  max-height: 50px;
+  max-height: 90px;
 }
 
 .header-title {
@@ -51,7 +52,6 @@ header {
   flex: 1;
 }
 
-/* Navigation */
 nav ul {
   list-style: none;
   margin: 0;
@@ -59,16 +59,19 @@ nav ul {
   display: flex;
 }
 
-nav li a {
+nav li a, #themeToggle {
   text-decoration: none;
   color: #555;
   font-weight: bold;
   padding: 0 15px;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Roboto', sans-serif;
   transition: color 0.3s ease;
 }
 
-nav li a:hover {
+nav li a:hover, #themeToggle:hover {
   color: #4CAF50;
 }
 
@@ -147,14 +150,64 @@ h2 {
   background-color: #45a049;
 }
 
+.product-info button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+  background-color: #45a049;
+}
+
 /* Footer */
 footer {
-  background-color: #9f9a9a;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 15px 5%;
   margin-top: 30px;
   font-family: 'Roboto', sans-serif;
+}
+
+/* Dark Mode */
+.darkmode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.darkmode header,
+.darkmode footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+.darkmode .product {
+  background-color: #1e1e1e;
+  border-color: #444;
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
+}
+
+.darkmode .product-info h3 {
+  color: #4CAF50;
+}
+
+.darkmode .product-info p {
+  color: #ddd;
+}
+
+.darkmode .product-info button {
+  background-color: #4CAF50;
+  color: #121212;
+}
+
+.darkmode .product-info button:hover {
+  background-color: #45a049;
 }
 
 /* Responsive */
@@ -167,13 +220,14 @@ footer {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    text-align: center;
   }
 
   nav ul {
     flex-direction: column;
   }
 
-  nav li a {
+  nav li a, #themeToggle {
     padding: 10px 0;
   }
 
