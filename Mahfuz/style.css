@@ -25,13 +25,13 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-/* Header */
+/* Header and Navigation */
 header {
   background-color: #fafafa;
   padding: 1rem 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 90%;
@@ -40,18 +40,13 @@ header {
   color: #555;
 }
 
-.logo img {
-  max-height: 90px;
+header h1 {
+  font-family: 'Playfair Display', serif;
+  color: #4CAF50;
+  margin: 0;
 }
 
-.header-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #26ca33;
-  text-align: center;
-  flex: 1;
-}
-
+/* Navigation */
 nav ul {
   list-style: none;
   margin: 0;
@@ -59,35 +54,24 @@ nav ul {
   display: flex;
 }
 
-nav li a, #themeToggle {
+nav li a {
   text-decoration: none;
   color: #555;
   font-weight: bold;
   padding: 0 15px;
   cursor: pointer;
-  background: none;
-  border: none;
-  font-family: 'Roboto', sans-serif;
   transition: color 0.3s ease;
 }
 
-nav li a:hover, #themeToggle:hover {
+nav li a:hover {
   color: #4CAF50;
 }
 
 /* Main */
 main {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-}
-
-/* Products grid */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Always 3 columns on large screens */
@@ -111,13 +95,13 @@ h2 {
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-/* Image container to keep equal card height */
+/* Product Images */
 .product img {
   width: 100%;
-  height: auto;
-  object-fit: contain; /* Show full image without cropping */
-  background-color: #f9f9f9; /* Background fill for empty space */
+  height: 260px;
+  object-fit: cover;
   border-radius: 8px;
+  padding: 5px;
 }
 
 /* Product Info */
@@ -125,29 +109,22 @@ h2 {
   margin: 12px 0 6px;
   font-family: 'Playfair Display', serif;
   color: #4CAF50;
-  font-size: 1.25rem; /* Increased font size for product titles */
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 .product-info p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #555;
+}
+
+.product-info p:last-child {
   font-weight: bold;
   color: #333;
-  font-size: 1.1rem; /* Increased font size for prices */
-}
-
-.product-info button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.product-info button:hover {
-  background-color: #45a049;
+  font-size: 1.1rem;
 }
 
 .product-info button {
@@ -167,7 +144,7 @@ h2 {
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 15px 5%;
@@ -175,64 +152,10 @@ footer {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Dark Mode */
-.darkmode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.darkmode header,
-.darkmode footer {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-.darkmode .product {
-  background-color: #1e1e1e;
-  border-color: #444;
-  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
-}
-
-.darkmode .product-info h3 {
-  color: #4CAF50;
-}
-
-.darkmode .product-info p {
-  color: #ddd;
-}
-
-.darkmode .product-info button {
-  background-color: #4CAF50;
-  color: #121212;
-}
-
-.darkmode .product-info button:hover {
-  background-color: #45a049;
-}
-
 /* Responsive */
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li a, #themeToggle {
-    padding: 10px 0;
-  }
-
-  h1 {
-    font-size: 2.5rem;
   }
 }
 
