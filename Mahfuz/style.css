@@ -15,23 +15,13 @@ h1 {
   color: #fff;
 }
 
-/* Section Heading */
-.section-heading {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #4CAF50; /* Now matches product title green */
-  margin-bottom: 20px;
-  font-family: 'Playfair Display', serif;
-}
-
-/* Header and Navigation */
+/* Header */
 header {
-  background-color: #fff;
+  background-color: #fafafa;
   padding: 1rem 5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 90%;
@@ -40,12 +30,19 @@ header {
   color: #555;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  margin: 0;
+.logo img {
+  max-height: 120px;
 }
 
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   margin: 0;
@@ -53,35 +50,24 @@ nav ul {
   display: flex;
 }
 
-nav li a, #themeToggle {
+nav li a {
   text-decoration: none;
   color: #555;
   font-weight: bold;
   padding: 0 15px;
   cursor: pointer;
-  background: none;
-  border: none;
-  font-family: 'Roboto', sans-serif;
   transition: color 0.3s ease;
 }
 
-nav li a:hover, #themeToggle:hover {
+nav li a:hover {
   color: #4CAF50;
 }
 
-/* Main content */
+/* Main */
 main {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-}
-
-/* Products grid */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -97,6 +83,7 @@ h2 {
   text-align: center;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .product:hover {
@@ -104,48 +91,49 @@ h2 {
   box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
 }
 
-/* Image container to keep equal card height */
+/* Product Images */
 .product img {
   width: 100%;
-  height: auto;
-  object-fit: contain; /* Show full image without cropping */
-  background-color: #f9f9f9; /* Background fill for empty space */
+  height: 260px;
+  object-fit: cover;
   border-radius: 8px;
+  background-color: #f9f9f9;
   padding: 5px;
 }
 
+/* Product Info */
 .product-info h3 {
-  margin: 10px 0 5px;
+  margin: 12px 0 6px;
   font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.5px;
 }
 
 .product-info p {
-  font-weight: bold;
-  color: #333;
-  font-size: 1.1rem;
-}
-
-.product-info button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #555;
 }
 
-.product-info button:hover {
-  background-color: #45a049;
+.product-info p:last-child {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+/* Selected Product Highlight */
+.product.selected {
+  border: 2px solid #4CAF50;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.6);
 }
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 15px 5%;
@@ -153,64 +141,10 @@ footer {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Dark Mode */
-.darkmode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.darkmode header,
-.darkmode footer {
-  background-color: #1e1e1e;
-  color: #ccc;
-}
-
-.darkmode .product {
-  background-color: #1e1e1e;
-  border-color: #444;
-  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
-}
-
-.darkmode .product-info h3 {
-  color: #4CAF50;
-}
-
-.darkmode .product-info p {
-  color: #ddd;
-}
-
-.darkmode .product-info button {
-  background-color: #4CAF50;
-  color: #121212;
-}
-
-.darkmode .product-info button:hover {
-  background-color: #45a049;
-}
-
 /* Responsive */
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav li a, #themeToggle {
-    padding: 10px 0;
-  }
-
-  h1 {
-    font-size: 2.5rem;
   }
 }
 
