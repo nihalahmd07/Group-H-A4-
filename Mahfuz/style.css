@@ -8,11 +8,15 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
-  color: #4CAF50;
 }
 
 h1 {
   color: #fff;
+}
+
+/* Logo */
+.logo img {
+  max-height: 120px;
 }
 
 /* Section Heading */
@@ -20,12 +24,13 @@ h1 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #4CAF50; /* Now matches product title green */
+  color: #000; 
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
 }
 
-/* Header and Navigation */
+
+/* Header */
 header {
   background-color: #fafafa;
   padding: 1rem 5%;
@@ -40,10 +45,12 @@ header {
   color: #555;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  margin: 0;
+.header-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    flex: 1;
 }
 
 /* Navigation */
@@ -74,7 +81,7 @@ main {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Always 3 columns on large screens */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px 5%;
 }
@@ -101,6 +108,7 @@ main {
   height: 260px;
   object-fit: cover;
   border-radius: 8px;
+  background-color: #f9f9f9;
   padding: 5px;
 }
 
@@ -108,9 +116,10 @@ main {
 .product-info h3 {
   margin: 12px 0 6px;
   font-family: 'Playfair Display', serif;
-  color: #4CAF50;
-  font-size: 1.25rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e7d32;
+  letter-spacing: 0.5px;
 }
 
 .product-info p {
@@ -123,28 +132,13 @@ main {
 
 .product-info p:last-child {
   font-weight: bold;
-  color: #333;
   font-size: 1.1rem;
-}
-
-.product-info button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.product-info button:hover {
-  background-color: #45a049;
+  color: #4CAF50;
 }
 
 /* Footer */
 footer {
-  background-color: #000000;
+  background-color: #8d2527;
   color: white;
   text-align: center;
   padding: 15px 5%;
@@ -155,10 +149,11 @@ footer {
 /* Responsive */
 @media (max-width: 992px) {
   .products {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (max-width: 576px) {
   .products {
     grid-template-columns: 1fr;
   }
