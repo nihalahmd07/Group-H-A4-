@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("British Cuisine page loaded.");
 
   let cart = [];
+  const cartLink = document.querySelector('a[href="#cart"]');
+  const cartCount = document.getElementById("cart-count"); 
 
-  // Create popup cart container (hidden initially)
+
   const cartPopup = document.createElement("div");
   cartPopup.id = "cart-popup";
   cartPopup.style.position = "fixed";
@@ -23,8 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateCartDisplay() {
     if (cart.length === 0) {
       cartPopup.innerHTML = "<h3>Cart</h3><p>No items yet.</p>";
+      cartLink.classList.remove("has-items");
+      cartCount.textContent = 0;
       return;
     }
+
+    cartLink.classList.add("has-items");
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
 
     let html = "<h3>Cart</h3><ul style='list-style:none; padding:0;'>";
     let total = 0;
@@ -50,19 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
     cartPopup.innerHTML = html;
   }
 
-  // Remove item from cart
   window.removeFromCart = function(index) {
     cart.splice(index, 1);
     updateCartDisplay();
   };
 
-  // Toggle popup when clicking "Cart"
-  document.querySelector('a[href="#cart"]').addEventListener("click", (e) => {
+  cartLink.addEventListener("click", (e) => {
     e.preventDefault();
     cartPopup.style.display = cartPopup.style.display === "none" ? "block" : "none";
   });
 
-  // Add to cart buttons
   document.querySelectorAll(".add-to-cart").forEach(btn => {
     btn.addEventListener("click", () => {
       const product = btn.closest(".product");
@@ -83,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Optional: close popup when clicking outside
   document.addEventListener("click", (e) => {
     if (!cartPopup.contains(e.target) && !e.target.closest('a[href="#cart"]')) {
       cartPopup.style.display = "none";

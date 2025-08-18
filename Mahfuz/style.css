@@ -10,7 +10,7 @@ h1, h2, h3, h4 {
 }
 
 .logo img {
-  max-height: 120px;
+   height: 75px;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 90%;
+  width: 100%;
   top: 0;
   z-index: 1000;
 }
@@ -48,6 +48,38 @@ nav li a {
 
 nav li a:hover {
   color: #4CAF50;
+}
+
+/* Cart Badge */
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Red dot */
+nav ul li a.cart-link {
+  position: relative;
+}
+nav ul li a.cart-link::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+}
+nav ul li a.cart-link.has-items::after {
+  display: block;
 }
 
 main {
@@ -145,3 +177,4 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+

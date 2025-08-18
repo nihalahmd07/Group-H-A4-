@@ -4,113 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Food Heaven - British Cuisine</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <link rel="stylesheet" href="/Mahfuz/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/Mahfuz/logo (1).png" alt="Logo">
+
+<header>
+  <div class="logo">
+    <img src="/Mahfuz/logo (1).png" alt="Logo">
+  </div>
+
+  <h1 class="header-title">British Cuisine</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#reservation">Reservation</a></li>
+      <li>
+        <a href="#cart" class="cart-link">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count" id="cart-count">0</span>
+          Cart
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="products">
+    <div class="product">
+      <img src="/Mahfuz/p3.jpg" alt="Pie">
+      <div class="product-info">
+        <h3>Shepherd’s Pie</h3>
+        <p>A savoury dish made with minced lamb, vegetables, and topped with mashed potatoes.</p>
+        <p class="price">£7.99</p>
+        <div class="cart-controls">
+          <input type="number" value="1" min="1" class="qty">
+          <button class="add-to-cart">Add to Cart</button>
         </div>
+      </div>
+    </div>
 
-        <h1 class="header-title">British Cuisine</h1>
-
-        <nav>
-            <ul>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#reservation">Reservation</a></li>
-                <li><a href="#cart">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-      <section class="products">
-        <div class="product">
-          <img src="/Mahfuz/p3.jpg" alt="Pie">
-          <div class="product-info">
-            <h3>Shepherd’s Pie</h3>
-            <p>A savoury dish made with minced lamb, vegetables, and topped with mashed potatoes.</p>
-            <p class="price">£7.99</p>
-            <div class="cart-controls">
-              <input type="number" value="1" min="1" class="qty">
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
+    <div class="product">
+      <img src="/Mahfuz/p.jpg" alt="Fish and Chips">
+      <div class="product-info">
+        <h3>Fish and Chips</h3>
+        <p>Crispy battered fish served with thick-cut chips and tartar sauce.</p>
+        <p class="price">£10.99</p>
+        <div class="cart-controls">
+          <input type="number" value="1" min="1" class="qty">
+          <button class="add-to-cart">Add to Cart</button>
         </div>
+      </div>
+    </div>
 
-        <div class="product">
-          <img src="/Mahfuz/p.jpg" alt="Fish and Chips">
-          <div class="product-info">
-            <h3>Fish and Chips</h3>
-            <p>Crispy battered fish served with thick-cut chips and tartar sauce.</p>
-            <p class="price">£10.99</p>
-            <div class="cart-controls">
-              <input type="number" value="1" min="1" class="qty">
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
+    <div class="product">
+      <img src="/Mahfuz/p2.png" alt="Full English Breakfast">
+      <div class="product-info">
+        <h3>Full English Breakfast</h3>
+        <p>Bacon, sausages, eggs, baked beans, grilled tomatoes, mushrooms, and toast.</p>
+        <p class="price">£14.99</p>
+        <div class="cart-controls">
+          <input type="number" value="1" min="1" class="qty">
+          <button class="add-to-cart">Add to Cart</button>
         </div>
+      </div>
+    </div>
 
-        <div class="product">
-          <img src="/Mahfuz/p2.png" alt="Full English Breakfast">
-          <div class="product-info">
-            <h3>Full English Breakfast</h3>
-            <p>Bacon, sausages, eggs, baked beans, grilled tomatoes, mushrooms, and toast.</p>
-            <p class="price">£14.99</p>
-            <div class="cart-controls">
-              <input type="number" value="1" min="1" class="qty">
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
+    <div class="product">
+      <img src="/Mahfuz/p4.jpg" alt="Beef Wellington">
+      <div class="product-info">
+        <h3>Beef Wellington</h3>
+        <p>Beef fillet with pâté and duxelles, wrapped in puff pastry and baked.</p>
+        <p class="price">£9.99</p>
+        <div class="cart-controls">
+          <input type="number" value="1" min="1" class="qty">
+          <button class="add-to-cart">Add to Cart</button>
         </div>
+      </div>
+    </div>
 
-        <div class="product">
-          <img src="/Mahfuz/p4.jpg" alt="Beef Wellington">
-          <div class="product-info">
-            <h3>Beef Wellington</h3>
-            <p>Beef fillet with pâté and duxelles, wrapped in puff pastry and baked.</p>
-            <p class="price">£9.99</p>
-            <div class="cart-controls">
-              <input type="number" value="1" min="1" class="qty">
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
+    <div class="product">
+      <img src="/Mahfuz/p5.jpg" alt="Bangers and Mash">
+      <div class="product-info">
+        <h3>Bangers and Mash</h3>
+        <p>Sausages with mashed potatoes and onion gravy.</p>
+        <p class="price">£11.99</p>
+        <div class="cart-controls">
+          <input type="number" value="1" min="1" class="qty">
+          <button class="add-to-cart">Add to Cart</button>
         </div>
+      </div>
+    </div>
 
-        <div class="product">
-          <img src="/Mahfuz/p5.jpg" alt="Bangers and Mash">
-          <div class="product-info">
-            <h3>Bangers and Mash</h3>
-            <p>Sausages with mashed potatoes and onion gravy.</p>
-            <p class="price">£11.99</p>
-            <div class="cart-controls">
-              <input type="number" value="1" min="1" class="qty">
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
+    <div class="product">
+      <img src="/Mahfuz/d6.jpg" alt="Afternoon Tea Set">
+      <div class="product-info">
+        <h3>Afternoon Tea Set</h3>
+        <p>Sandwiches, scones with cream and jam, plus assorted cakes.</p>
+        <p class="price">£5.99</p>
+        <div class="cart-controls">
+          <input type="number" value="1" min="1" class="qty">
+          <button class="add-to-cart">Add to Cart</button>
         </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <div class="product">
-          <img src="/Mahfuz/d6.jpg" alt="Afternoon Tea Set">
-          <div class="product-info">
-            <h3>Afternoon Tea Set</h3>
-            <p>Sandwiches, scones with cream and jam, plus assorted cakes.</p>
-            <p class="price">£5.99</p>
-            <div class="cart-controls">
-              <input type="number" value="1" min="1" class="qty">
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+<footer>
+  <p>&copy; 2025 Food Heaven. All rights reserved.</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 Food Heaven. All rights reserved.</p>
-  </footer>
-
-  <script src="/Mahfuz/script.js"></script>
+<script src="/Mahfuz/script.js"></script>
 </body>
 </html>
