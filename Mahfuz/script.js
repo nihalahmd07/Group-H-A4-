@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let cart = [];
   const cartLink = document.querySelector('a[href="#cart"]');
-  const cartCount = document.getElementById("cart-count"); 
-
+  const cartCount = document.getElementById("cart-count");
 
   const cartPopup = document.createElement("div");
   cartPopup.id = "cart-popup";
