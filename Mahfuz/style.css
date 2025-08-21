@@ -1,5 +1,11 @@
-body {
+/* Reset & Base */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
   color: #333;
@@ -9,10 +15,7 @@ h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
 
-.logo img {
-   height: 90px;
-}
-
+/* Header & Navbar */
 header {
   background-color: #fafafa;
   padding: 1rem 5%;
@@ -21,10 +24,13 @@ header {
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  width: 90%;
+  width: 100%;
   top: 0;
   z-index: 1000;
-  color: #555;
+}
+
+.logo img {
+  height: 75px;
 }
 
 .header-title {
@@ -64,7 +70,6 @@ nav li a:hover {
   font-weight: bold;
 }
 
-/* Red dot */
 nav ul li a.cart-link {
   position: relative;
 }
@@ -83,10 +88,196 @@ nav ul li a.cart-link.has-items::after {
   display: block;
 }
 
+/* Main */
 main {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
+/* Hero */
+.hero {
+  height: 80vh;
+  background: url('/Mahfuz/assets/background.jpg') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Menu */
+.menu {
+  padding: 50px 5%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.menu h2 {
+  color: #4CAF50;
+  margin-bottom: 30px;
+}
+
+.menu-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-cards .card {
+  background: white;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.menu-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-cards .card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.menu-cards .card h3 {
+  padding: 10px 0;
+  color: #4CAF50;
+}
+
+/* About */
+.about {
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.about h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.about p {
+  width: 60%;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Contact */
+.contact {
+  padding: 20px 5%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.contact h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin: 20px 0;
+}
+
+/* Reservation */
+.reservation-section {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-section h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reservation-form label {
+  font-weight: bold;
+  color: #555;
+}
+
+.reservation-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.reservation-form input:focus {
+  border-color: #ff7b54;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 123, 84, 0.5);
+}
+
+.reservation-form button {
+  padding: 12px;
+  background: #5dcf53;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reservation-form button:hover {
+  background: #79bd3d;
+}
+
+/* My Reservation Display */
+.my-reservation {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.my-reservation h4 {
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.cancel-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn:hover {
+  background: #c62828;
+}
+
+/* Products */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,7 +291,7 @@ main {
   border-radius: 10px;
   padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -118,7 +309,6 @@ main {
 
 .product-info h3 {
   margin: 12px 0 6px;
-  font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: #2e7d32;
@@ -160,6 +350,7 @@ main {
   display: flex;
 }
 
+/* Footer */
 footer {
   background-color: #8d2527;
   color: white;
@@ -167,6 +358,46 @@ footer {
   padding: 15px 5%;
 }
 
+/* Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333e;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  flex-wrap: wrap;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.cookie-banner button {
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#reject-cookies {
+  background: #e53935;
+}
+
+.close-btn {
+  background: #555;
+  font-weight: bold;
+}
+
+/* Responsive */
 @media (max-width: 992px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
@@ -177,4 +408,185 @@ footer {
   .products {
     grid-template-columns: 1fr;
   }
+  .hero h1 {
+    font-size: 35px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
+/*jony css*/
+
+
+h1 {
+  color: #fff;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  transition: color 0.3s ease;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 5%;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.product img {
+  width: 250px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 50px;
+  flex: 1;
+}
+
+.product-info h3 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  color: #df6868;
+}
+
+.product-info p {
+  margin: 6px 0;
+}
+
+.product-info .price {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #4CAF50;
+}
+
+.cart-controls {
+  margin-top: 10px;
+}
+
+.cart-controls .qty {
+  width: 50px;
+  padding: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.cart-controls .add-to-cart {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-controls .add-to-cart:hover {
+  background-color: #0056b3;
+}
+
+.rating-section .stars {
+  display: flex;
+}
+
+.rating-section .star {
+  font-size: 20px;
+  color: #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.rating-section .star:hover {
+  transform: scale(1.2);
+}
+
+.rating-section .star.selected {
+  color: #FFD700; /* Golden color for selected stars */
+}
+
+.review-section {
+  margin-top: 15px;
+}
+
+.review-section .review {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.submit-review {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-review:hover {
+  background-color: #218838;
+}
+
+.reviews {
+  margin-top: 15px;
+}
+
+.review-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.review-item {
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Rating Stars Styling */
+.stars {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.star {
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.star.selected,
+.star:hover,
+.star:hover ~ .star {
+  color: #FFD700;
 }

@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Food Heaven - British Cuisine</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Heaven</title>
   <link rel="stylesheet" href="/Mahfuz/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-
-<header>
+  <header>
   <div class="logo">
-    <img src="assets/logo (1).png" alt="Logo">
+    <img src="/Mahfuz/assets/logo.jpg" alt="Logo">
   </div>
 
-  <h1 class="header-title">British Cuisine</h1>
+  
 
   <nav>
     <ul>
@@ -35,92 +33,85 @@
   </nav>
 </header>
 
-<main>
-  <section class="products">
-    <div class="product">
-      <img src="assets/p.jpg" alt="Pie">
-      <div class="product-info">
-        <h3>Shepherd’s Pie</h3>
-        <p>A savoury dish made with minced lamb, vegetables, and topped with mashed potatoes.</p>
-        <p class="price">£7.99</p>
-        <div class="cart-controls">
-          <input type="number" value="1" min="1" class="qty">
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="product">
-      <img src="assets/p2.png" alt="Fish and Chips">
-      <div class="product-info">
-        <h3>Fish and Chips</h3>
-        <p>Crispy battered fish served with thick-cut chips and tartar sauce.</p>
-        <p class="price">£10.99</p>
-        <div class="cart-controls">
-          <input type="number" value="1" min="1" class="qty">
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="assets/p3.jpg" alt="Full English Breakfast">
-      <div class="product-info">
-        <h3>Full English Breakfast</h3>
-        <p>Bacon, sausages, eggs, baked beans, grilled tomatoes, mushrooms, and toast.</p>
-        <p class="price">£14.99</p>
-        <div class="cart-controls">
-          <input type="number" value="1" min="1" class="qty">
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="assets/p4.jpg" alt="Beef Wellington">
-      <div class="product-info">
-        <h3>Beef Wellington</h3>
-        <p>Beef fillet with pâté and duxelles, wrapped in puff pastry and baked.</p>
-        <p class="price">£9.99</p>
-        <div class="cart-controls">
-          <input type="number" value="1" min="1" class="qty">
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="assets/p5.jpg" alt="Bangers and Mash">
-      <div class="product-info">
-        <h3>Bangers and Mash</h3>
-        <p>Sausages with mashed potatoes and onion gravy.</p>
-        <p class="price">£11.99</p>
-        <div class="cart-controls">
-          <input type="number" value="1" min="1" class="qty">
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="assets/d6.jpg" alt="Afternoon Tea Set">
-      <div class="product-info">
-        <h3>Afternoon Tea Set</h3>
-        <p>Sandwiches, scones with cream and jam, plus assorted cakes.</p>
-        <p class="price">£5.99</p>
-        <div class="cart-controls">
-          <input type="number" value="1" min="1" class="qty">
-          <button class="add-to-cart">Add to Cart</button>
-        </div>
-      </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Experience a World of Flavors</h1>
+      <p>From the streets of India to the kitchens of Italy and Britain.</p>
     </div>
   </section>
-</main>
 
-<footer>
-  <p>&copy; 2025 Food Heaven. All rights reserved.</p>
-</footer>
 
-<script src="/Mahfuz/script.js"></script>
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-cards">
+      <div class="card">
+        <a href="/Mahfuz/jony.html">
+        <img src="/Mahfuz/assets/indian.jpg" alt="Indian Cuisine">
+        </a>
+        <h3>Indian Cuisine</h3>
+      </div>
+      <div class="card">
+        <img src="/Mahfuz/assets/Italian.jpg" alt="Italian Cuisine">
+        <h3>Italian Cuisine</h3>
+      </div>
+      <div class="card">
+  <a href="/Mahfuz/mahfuz.html">
+    <img src="/Mahfuz/assets/british.jpg" alt="British Cuisine">
+  </a>
+  <h3>British Cuisine</h3>
+</div>
+    </div>
+  </section>
+
+
+  <section id="reservation" class="reservation-section">
+    <h3>Reservation</h3>
+    <form class="reservation-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="guests">Number of Guests:</label>
+      <input type="number" id="guests" name="guests" min="1" required>
+
+      <button type="submit">Reserve a Table</button>
+    </form>
+
+    <div id="my-reservation" class="my-reservation">
+      <h4>My Reservation</h4>
+      <p id="reservation-details">No reservation found.</p>
+      <button id="cancel-reservation" class="cancel-btn">Cancel Reservation</button>
+    </div>
+  </section>
+
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>In Food Heaven, we believe that food is a journey. We are passionate about bringing the authentic flavors of India, Italy, and Britain to your table. We use only the freshest ingredients to create dishes that are both delicious and memorable. Come and join us on this culinary adventure!</p>
+  </section>
+
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> +1 234 567 890</p>
+    <p><strong>Email:</strong> info@foodheaven.com</p>
+  </section>
+
+
+  <footer>
+    <p>© 2025 Food Heaven. All rights reserved</p>
+  </footer>
+
+  
+  <div id="cookie-banner" class="cookie-banner">
+    <p>We use cookies to improve your experience. By using our site, you accept our cookie policy.</p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies">Accept</button>
+      <button id="reject-cookies">Reject</button>
+      <button id="close-cookies" class="close-btn">✖</button>
+    </div>
+  </div>
+
+  <script src="/Mahfuz/script.js"></script>
 </body>
 </html>
